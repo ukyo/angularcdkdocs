@@ -31,3 +31,6 @@ jobs:
 
       # run tests!
       - run: yarn test:my-ui:ci
+      - run: yarn build-all
+      - run: yarn ss:ci
+      - run: yarn reg

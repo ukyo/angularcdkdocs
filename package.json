@@ -15,8 +15,9 @@
     "build-storybook": "build-storybook",
     "build-all": "run-s build-lib build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "ss": "storybook-chrome-screenshot",
-    "reg": "reg-suit run"
+    "reg": "reg-suit run",
+    "serve-storybook-static": "http-server storybook-static -p 8888",
+    "ss:ci": "zisui --serverCmd='npm run serve-storybook-static' http://localhost:8888"
   },
   "private": true,
   "dependencies": {
@@ -53,6 +54,7 @@
     "@types/styled-components": "^4.0.3",
     "babel-loader": "^8.0.4",
     "codelyzer": "~4.5.0",
+    "http-server": "^0.11.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
@@ -70,12 +72,12 @@
     "reg-notify-github-plugin": "^0.7.16",
     "reg-publish-s3-plugin": "^0.7.16",
     "reg-suit": "^0.7.15",
-    "storybook-chrome-screenshot": "^1.3.1",
     "styled-components": "^4.1.1",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.1"
+    "typescript": "~3.1.1",
+    "zisui": "^1.2.2"
   }
 }
